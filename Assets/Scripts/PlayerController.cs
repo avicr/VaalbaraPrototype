@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
+using TMPro;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using System.Collections;
+using System;
 
 public class PlayerController : MonoBehaviour {
 
@@ -24,16 +28,35 @@ public class PlayerController : MonoBehaviour {
     public bool InvincibleBecauseOfFlight;
     public AudioClip HitGroundClip;
     protected bool AttackConnectedThisFrame;
+    protected WaveManager MyWaveManager;
 
     // Use this for initialization
     void Start ()
-    {
+    {        
         AnimController = GetComponent<Animator>();
         MainCollider = GetComponent<BoxCollider>();
         
         GameObjectParent.transform.position = new Vector3(GameObjectParent.transform.position.x, GameObjectParent.transform.position.y, GameObjectParent.transform.position.y);
         TheCameraPanner = Camera.main.GetComponent<CameraPanner>();
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("AI Sense Layer"), LayerMask.NameToLayer("Hit Box"));
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Ignore Raycast"), LayerMask.NameToLayer("Hit Box"));
+
+        if (IsRealPlayer)
+        {
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(Health.ToString());
+        }
+        else 
+        {
+            if (MyWaveManager == null || !MyWaveManager.HasBeenActivated)
+            {
+                gameObject.SetActive(false);
+            }
+        }        
+    }
+
+    public void SetWaveManager(WaveManager NewWaveManager)
+    {
+        MyWaveManager = NewWaveManager;
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -50,6 +73,10 @@ public class PlayerController : MonoBehaviour {
             OnTakeDamageBegin();
 
             Health -= collider.GetComponentInParent<AttackInfo>().DamageAmount;
+            if (IsRealPlayer)
+            {
+                TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(Health.ToString());
+            }
 
             if (Health <= 0)
             {
@@ -80,25 +107,15 @@ public class PlayerController : MonoBehaviour {
             }
 
         }
-    }
-
-    public bool IsOnScreen()
-    {
-        var dist = (GameObjectParent.transform.position - Camera.main.transform.position).z;
-        var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + MainCollider.bounds.size.x / 2;
-        var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x - MainCollider.bounds.size.x / 2;
-
-
-        return GameObjectParent.transform.position.x >= leftBorder && GameObjectParent.transform.position.x <= rightBorder;
-    }
+    }    
 
     // Update is called once per frame
     void Update ()
-    {     
-        if (!IsOnScreen())
-        {
-            return;
-        }
+    {
+        //if (!TheCameraPanner.IsOnScreen(gameObject))
+        //{
+        //    return;
+        //}
 
         bool bWalkingThisFrame = false;
         Vector3 Velocity = new Vector3();
@@ -161,6 +178,31 @@ public class PlayerController : MonoBehaviour {
 
     void Move(Vector3 Velocity)
     {
+        if (TheCameraPanner != null && IsRealPlayer)
+        {
+            //Replace with level min and max Y!!
+            float ClampedY = Mathf.Clamp(GameObjectParent.transform.position.y, -0.708f, -0.222f);
+
+            //Stay within the camera view limits
+            var dist = (GameObjectParent.transform.position - Camera.main.transform.position).z;
+            var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + MainCollider.bounds.size.x / 2;
+            var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x - MainCollider.bounds.size.x / 2; ;
+
+            float ClampedX = Mathf.Clamp(GameObjectParent.transform.position.x, leftBorder, rightBorder);
+
+            GameObjectParent.transform.position = new Vector3(ClampedX, ClampedY, ClampedY);
+
+            if (Velocity != Vector3.zero && IsRealPlayer)
+            {
+                TheCameraPanner.UpdateScroll(this, Velocity);
+            }
+        }
+        else
+        {
+            float ClampedY = Mathf.Clamp(GameObjectParent.transform.position.y, -0.708f, -0.222f);
+            GameObjectParent.transform.position = new Vector3(GameObjectParent.transform.position.x, ClampedY, ClampedY);
+        }
+
         if (!InvincibleBecauseOfFlight && Health > 0 && !AnimController.GetBool("IsRecovering") && !AnimController.GetBool("IsStunned") && AnimController.GetBool("IsWalking"))
         {
             if (Direction == 1)
@@ -171,26 +213,7 @@ public class PlayerController : MonoBehaviour {
             GameObjectParent.transform.Translate(Velocity);
             Velocity.y = 0;
 
-        }
-
-        if (TheCameraPanner != null)
-        {
-            float ClampedY = Mathf.Clamp(GameObjectParent.transform.position.y, -0.708f, -0.222f);
-
-            var dist = (GameObjectParent.transform.position - Camera.main.transform.position).z;
-            var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + MainCollider.bounds.size.x / 2;
-            var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x - MainCollider.bounds.size.x / 2; ;
-
-            float ClampedX = Mathf.Clamp(GameObjectParent.transform.position.x, leftBorder, rightBorder);
-
-            GameObjectParent.transform.position = new Vector3(ClampedX, ClampedY, ClampedY);
-
-            if (IsRealPlayer && GameObjectParent.transform.position.x > TheCameraPanner.transform.position.x)
-            {
-                TheCameraPanner.transform.Translate(Velocity);
-                TheCameraPanner.EnforceMapLimits();
-            }
-        }
+        }        
     }
 
     public void ChangeDirection(int NewDirection)
@@ -234,7 +257,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (IsRealPlayer)
         {
-            AnimController.SetInteger("ChainedAttacks", 0);
+            //AnimController.SetInteger("ChainedAttacks", 0);
         }
 
         AttackConnectedThisFrame = false;
@@ -289,5 +312,18 @@ public class PlayerController : MonoBehaviour {
             EffectPlayer.Stop();
         }
         EffectPlayer.PlayOneShot(HitGroundClip);
+    }
+
+    public void OnFinishDeath()
+    {
+        gameObject.SetActive(false);
+
+        if (IsRealPlayer)
+        {
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("GAME OVER");
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().transform.localScale = new Vector3(4, 4, 4);
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().rectTransform.localPosition = Vector3.zero;
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().alignment = TextAlignmentOptions.Center;
+        }
     }
 }

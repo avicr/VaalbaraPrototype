@@ -299,7 +299,7 @@ public class PlayerInput : MonoBehaviour
         if (/*Input.GetMouseButtonDown(0) || */(Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
             InitialTouchPosition = CurrentTouchPosition;
-            Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(InitialTouchPosition.ToString());
+            //Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(InitialTouchPosition.ToString());
         }
 
         if (/*Input.GetMouseButtonUp(1) || */(Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Ended))
@@ -339,13 +339,13 @@ public class PlayerInput : MonoBehaviour
         if (/*Input.GetMouseButtonDown(1) || */(Input.touchCount == 3 && Input.GetTouch(2).phase == TouchPhase.Ended))
         {
             DeadZone--;
-            Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(DeadZone.ToString());
+            //Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(DeadZone.ToString());
         }
 
         if (/*Input.GetMouseButtonDown(0) || */(Input.touchCount == 4 && Input.GetTouch(2).phase == TouchPhase.Ended))
         {
             DeadZone++;
-            Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(DeadZone.ToString());
+            //Player.TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(DeadZone.ToString());
         }
         return TouchResults;
     }

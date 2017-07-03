@@ -12,10 +12,11 @@ public class AIController : MonoBehaviour {
     public float AttackChainRate;
     public bool bPlayerInRange;
     public SphereCollider SenseSphere;
+    public PlayerController Target;
 
     void Start ()
     {
-        ChoiceCountDown = ChoiceTime;
+        ChoiceCountDown = 0;
         Player.inputContainer.Reset();
         SenseSphere = GetComponentInChildren<SphereCollider>();        
     }
@@ -24,15 +25,18 @@ public class AIController : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            if (Player.AnimController.GetInteger("ChainedAttacks") < 3)
+            int ChangeTargetRoll = Random.Range(0, 10);
+            if (ChangeTargetRoll > 7)
             {
-                AttackAgainCountDown = AttackChainRate;
-                Debug.Log("Attack again");
+                Target = collision.GetComponent<PlayerController>();
             }
-            else
-                Debug.Log("end combo");
+
+            if (collision.GetComponent<PlayerController>() == Target && Player.AnimController.GetInteger("ChainedAttacks") < 3)
+            {
+                AttackAgainCountDown = AttackChainRate;             
+            }           
         }
-        else if (collision.tag == "Enemy")
+        else if (collision.tag == "Enemy" && collision.GetComponent<AIController>().Target == Target)
         {
             inputContainer.Reset();
             if (Random.Range(0, 2) == 0)
@@ -48,10 +52,23 @@ public class AIController : MonoBehaviour {
         
     }
 
-    
+    void AcquireTarget()
+    {
+        PlayerInput[] Players = FindObjectsOfType<PlayerInput>();
+        Target = Players[Random.Range(0, Players.Length)].GetComponent<PlayerController>();
+    }
+
+    void DoAttack()
+    {
+        Player.ChangeDirection(Target.transform.position.x < transform.position.x ? 1 : 0);
+        inputContainer.Reset();
+        inputContainer.AttackPressed = true;
+    }
+
     // Update is called once per frame
     void Update ()
     {
+        
         inputContainer.AttackPressed = false;
         ChoiceCountDown -= Time.deltaTime;
         
@@ -66,17 +83,20 @@ public class AIController : MonoBehaviour {
 
             if (AttackAgainCountDown < 0)
             {
-                inputContainer.Reset();
-                inputContainer.AttackPressed = true;
+                DoAttack();                
             }
             Player.inputContainer = inputContainer;
 
             return;
         }
+        if (Target == null)
+        {
+            AcquireTarget();
+        }
 
-        Vector3 PlayerPos = FindObjectOfType<PlayerInput>().transform.position;
+        Vector3 PlayerPos = Target.transform.position;
 
-        if (Mathf.Abs(PlayerPos.y - transform.position.y) <= 0.022)
+        if (Mathf.Abs(PlayerPos.y - transform.position.y) <= 0.005)
         {
             inputContainer.MovementAxis.y = 0;
         }
@@ -86,15 +106,13 @@ public class AIController : MonoBehaviour {
             inputContainer.MovementAxis.x = 0;
         }
 
-        if (Random.Range(0, 10) > 4 && ChoiceCountDown <= ChoiceTime / 2 && Mathf.Abs(PlayerPos.y - transform.position.y) <= 0.022 && Mathf.Abs(PlayerPos.x - transform.position.x) <= 0.23)
+        if (Random.Range(0, 10) > 4 && ChoiceCountDown <= ChoiceTime / 2 && Mathf.Abs(PlayerPos.y - transform.position.y) <= 0.006 && Mathf.Abs(PlayerPos.x - transform.position.x) <= 0.26)
         {
-            inputContainer.Reset();
-            inputContainer.AttackPressed = true;
+            DoAttack();
         }
 
         if (ChoiceCountDown < 0)
         {
-
             inputContainer.Reset();
                         
             if (Mathf.Abs(PlayerPos.x - transform.position.x) <= 0.6)
