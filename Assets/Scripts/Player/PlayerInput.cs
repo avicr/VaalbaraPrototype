@@ -14,8 +14,9 @@ public struct InputContainer
     public bool PreviousWeaponPressed;
     public bool NextWeaponPressed;
 
-    public Vector2 MovementAxis;    
+    public Vector2 MovementAxis;
 
+    
     public bool DownHeld;    
 
     public void Reset()
@@ -51,6 +52,7 @@ public struct TouchContainer
 
 public class PlayerInput : MonoBehaviour
 {
+    protected int PlayerNumber;
     public KeyCode JumpingKey;
     public KeyCode AttackingKey;
     public KeyCode MoveLeftKey;
@@ -73,9 +75,16 @@ public class PlayerInput : MonoBehaviour
     public TMP_InputField DeadZoneTextField;
 
     void Start()
-    {        
-        Player.inputContainer.Reset();
-        DeadZoneTextField.text = DeadZone.ToString();
+    {
+        if (Player != null)
+        {
+            Player.inputContainer.Reset();
+        }
+        else
+        {
+            PlayerNumber = 0;
+        }
+        //DeadZoneTextField.text = DeadZone.ToString();
     }
 
     public void OnFixedJoystickChanged(bool Value)
@@ -96,7 +105,7 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (!IsAIControlled)
+        if (!IsAIControlled && Player != null)
         {
             Player.inputContainer = GetInput();
         }
@@ -116,8 +125,15 @@ public class PlayerInput : MonoBehaviour
         inputContainer.Reset();
 
         // Check Movement
-        float movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(Player.PlayerNumber));
-        float movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(Player.PlayerNumber));
+
+        float movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(0));
+        float movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(0));
+
+        if (Player != null)
+        {
+            movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(Player.PlayerNumber));
+            movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(Player.PlayerNumber));
+        }
 
         TouchContainer Touch = GetTouchInput();
 
@@ -143,14 +159,14 @@ public class PlayerInput : MonoBehaviour
 
        
         // Check Attack2ing
-        inputContainer.Attack2Pressed = Input.GetButtonDown(InputUtility.GetJumpButtonName(Player.PlayerNumber))
+        inputContainer.Attack2Pressed = Input.GetButtonDown(InputUtility.GetJumpButtonName(PlayerNumber))
             || Input.GetKeyDown(JumpingKey) || Touch.TouchAttack2;
        
-        inputContainer.Attack2Released = Input.GetButtonUp(InputUtility.GetJumpButtonName(Player.PlayerNumber))
+        inputContainer.Attack2Released = Input.GetButtonUp(InputUtility.GetJumpButtonName(PlayerNumber))
             || Input.GetKeyUp(JumpingKey);
 
         // Check Shooting
-        string shootString = InputUtility.GetShootButtonName(Player.PlayerNumber);
+        string shootString = InputUtility.GetShootButtonName(PlayerNumber);
         inputContainer.AttackPressed = Input.GetButtonDown(shootString)
             || Input.GetKeyDown(AttackingKey) || Touch.TouchAttack;
         

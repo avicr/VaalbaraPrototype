@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour {
@@ -11,7 +12,7 @@ public class WaveManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
-    {        
+    {
         GetComponent<SpriteRenderer>().enabled = false;
 
         foreach (PlayerController Enemy in Enemies)

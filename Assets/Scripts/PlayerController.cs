@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -32,12 +33,12 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start ()
-    {        
+    {
         AnimController = GetComponent<Animator>();
         MainCollider = GetComponent<BoxCollider>();
-        
+
         GameObjectParent.transform.position = new Vector3(GameObjectParent.transform.position.x, GameObjectParent.transform.position.y, GameObjectParent.transform.position.y);
-        TheCameraPanner = Camera.main.GetComponent<CameraPanner>();
+
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("AI Sense Layer"), LayerMask.NameToLayer("Hit Box"));
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Ignore Raycast"), LayerMask.NameToLayer("Hit Box"));
 
@@ -61,10 +62,15 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collider)
     {
-        string ParentTag = collider.gameObject.GetComponentInParent<PlayerController>().tag;
-        if (tag == ParentTag)
+        PlayerController OwningPlayer = collider.gameObject.GetComponentInParent<PlayerController>();
+
+        if (OwningPlayer != null)
         {
-            return;
+            string ParentTag = OwningPlayer.tag;
+            if (tag == ParentTag)
+            {
+                return;
+            }
         }
         
         if (Health > 0 && collider.tag == "HitBox" && !InvincibleBecauseOfFlight)
@@ -112,6 +118,16 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if (IsRealPlayer && Health <= 0 && inputContainer.AttackPressed)
+        {
+            foreach (GameObject Object in SceneManager.GetSceneByName("TopLevelShit").GetRootGameObjects())
+            {
+                if (Object.GetComponent<GameManager>() != null)
+                {
+                    Object.GetComponent<GameManager>().Restart();
+                }
+            }
+        }
         //if (!TheCameraPanner.IsOnScreen(gameObject))
         //{
         //    return;
@@ -316,14 +332,17 @@ public class PlayerController : MonoBehaviour {
 
     public void OnFinishDeath()
     {
-        gameObject.SetActive(false);
-
         if (IsRealPlayer)
         {
-            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("GAME OVER");
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("GAME OVER\nPRESS ATTACK TO RESET");
             TheCanvas.GetComponentInChildren<TextMeshProUGUI>().transform.localScale = new Vector3(4, 4, 4);
             TheCanvas.GetComponentInChildren<TextMeshProUGUI>().rectTransform.localPosition = Vector3.zero;
             TheCanvas.GetComponentInChildren<TextMeshProUGUI>().alignment = TextAlignmentOptions.Center;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+
         }
     }
 }

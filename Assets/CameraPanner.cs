@@ -50,15 +50,16 @@ public class CameraPanner : MonoBehaviour {
                 // Maybe allow for vertical maps by option?
                 Velocity.y = 0;
                 Velocity.z = 0;
-
+                
                 transform.Translate(Velocity);
+                Camera.main.transform.position = transform.position;
                 EnforceMapLimits();
             }
 
             EnforceMapLimits();
         }
     }
-
+    
     public void EnforceMapLimits()
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, MinX, MaxX), transform.position.y, transform.position.z);
