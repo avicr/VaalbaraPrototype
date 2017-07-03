@@ -16,10 +16,11 @@ public class TitleScreenManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if (TheInput.GetInput().AttackPressed)
+        InputContainer FrameInput = TheInput.GetInput();
+
+        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Winners") && FrameInput.AttackPressed)
         {
-            SceneManager.UnloadSceneAsync("TitleScreen");
-            //GetComponent<Animator>().SetTrigger("MenuCleared");
+            GetComponent<Animator>().SetTrigger("MenuCleared");
         }
 	}
 }

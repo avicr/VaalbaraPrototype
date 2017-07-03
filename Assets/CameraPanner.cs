@@ -14,6 +14,8 @@ public class CameraPanner : MonoBehaviour {
 	void Start ()
     {
         MinX = transform.position.x;
+        Camera.main.transform.position = transform.position;
+        //Camera.main.orthographic = false;
         //MaxX = BG.transform.position.x + BG.GetComponent<SpriteRenderer>().bounds.size.x; 
         List<PlayerController> PlayersToAdd = new List<PlayerController>();
         

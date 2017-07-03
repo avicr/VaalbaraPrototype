@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    protected int PendingSceneDeletes;
 	// Use this for initialization
 	void Start ()
     {
@@ -13,7 +14,26 @@ public class GameManager : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene("TopLevelShit");
+        PendingSceneDeletes = SceneManager.sceneCount - 1;
+
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name != "TopLevelShit")
+            {
+                SceneManager.UnloadSceneAsync(i);
+            }
+        }
+        SceneManager.sceneUnloaded += OnSceneUnloadedForRestart;
+    }
+
+    private void OnSceneUnloadedForRestart(Scene TheScene)
+    {
+        PendingSceneDeletes--;
+
+        if (PendingSceneDeletes == 0)
+        {
+            DoTitleScreen();
+        }
     }
 
     public void DoTitleScreen()
