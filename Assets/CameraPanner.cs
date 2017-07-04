@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Linq;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class CameraPanner : MonoBehaviour {
@@ -14,17 +15,26 @@ public class CameraPanner : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        MinX = transform.position.x;
-        Camera.main.transform.position = transform.position;
+        MinX = transform.position.x;        
         //Camera.main.orthographic = false;
         //MaxX = BG.transform.position.x + BG.GetComponent<SpriteRenderer>().bounds.size.x; 
         List<PlayerController> PlayersToAdd = new List<PlayerController>();
-    
-        //TheCamera = GetComponent from manager    
+
+        foreach (GameObject Object in SceneManager.GetSceneByName("TopLevelShit").GetRootGameObjects())
+        {
+            if (Object.GetComponent<Camera>() != null)
+            {
+                TheCamera = Object.GetComponent<Camera>();
+                break;
+            }
+        }
+
         foreach (PlayerInput HumanPlayerInput in GameManager.GetPlayerInputs())
         {
             ThePlayers.Add(HumanPlayerInput.Player);
-        }                
+        }
+
+        TheCamera.transform.position = transform.position;
     }    
 
     public void UpdateScroll(PlayerController HumanPlayer, Vector3 Velocity)
@@ -38,8 +48,8 @@ public class CameraPanner : MonoBehaviour {
             
             PlayerController LastPlayer = ThePlayers.Last();
 
-            var dist = (LastPlayer.transform.position - Camera.main.transform.position).z;
-            var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + LastPlayer.MainCollider.bounds.size.x / 2;            
+            var dist = (LastPlayer.transform.position - TheCamera.transform.position).z;
+            var leftBorder = TheCamera.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + LastPlayer.MainCollider.bounds.size.x / 2;            
 
             bool IsAPlayerOnMinEdge = ThePlayers.Last().transform.position.x <= leftBorder;
             bool AllActiveEnemiesDead = ActiveWaveManager != null && ActiveWaveManager.AllEnemiesDead();
@@ -53,7 +63,7 @@ public class CameraPanner : MonoBehaviour {
                 Velocity.z = 0;
                 
                 transform.Translate(Velocity);
-                Camera.main.transform.position = transform.position;
+                TheCamera.transform.Translate(Velocity);
                 EnforceMapLimits();
             }
 
@@ -70,9 +80,9 @@ public class CameraPanner : MonoBehaviour {
     // Returns true if the object is completely visible on screen
     public bool IsOnScreen(GameObject Object)
     {
-        var dist = (Object.transform.position - Camera.main.transform.position).z;
-        var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + Object.GetComponent<BoxCollider>().bounds.size.x / 2;
-        var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x - Object.GetComponent<BoxCollider>().bounds.size.x / 2;
+        var dist = (Object.transform.position - TheCamera.transform.position).z;
+        var leftBorder = TheCamera.ViewportToWorldPoint(new Vector3(0, 0, dist)).x + Object.GetComponent<BoxCollider>().bounds.size.x / 2;
+        var rightBorder = TheCamera.ViewportToWorldPoint(new Vector3(1, 0, dist)).x - Object.GetComponent<BoxCollider>().bounds.size.x / 2;
 
         return Object.transform.position.x >= leftBorder && Object.transform.position.x <= rightBorder;
     }
@@ -80,9 +90,9 @@ public class CameraPanner : MonoBehaviour {
     // Returns true if the given object is visible at all
     public bool IsVisible(GameObject Object)
     {
-        var dist = (Object.transform.position - Camera.main.transform.position).z;
-        var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x - Object.GetComponent<BoxCollider>().bounds.size.x / 2;
-        var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x + Object.GetComponent<BoxCollider>().bounds.size.x / 2;
+        var dist = (Object.transform.position - TheCamera.transform.position).z;
+        var leftBorder = TheCamera.ViewportToWorldPoint(new Vector3(0, 0, dist)).x - Object.GetComponent<BoxCollider>().bounds.size.x / 2;
+        var rightBorder = TheCamera.ViewportToWorldPoint(new Vector3(1, 0, dist)).x + Object.GetComponent<BoxCollider>().bounds.size.x / 2;
 
         return Object.transform.position.x >= leftBorder && Object.transform.position.x <= rightBorder;
     }

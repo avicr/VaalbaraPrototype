@@ -17,7 +17,7 @@ public class TitleScreenManager : MonoBehaviour {
     {
         if (GameManager.GetNumJoinedPlayers() > 0)
         {
-            GetComponent<Animator>().SetTrigger("MenuCleared");
+            GetComponent<Animator>().SetBool("PlayerJoined", true);
         }
 	}
 }

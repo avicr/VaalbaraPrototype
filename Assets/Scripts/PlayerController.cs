@@ -200,12 +200,7 @@ public class PlayerController : MonoBehaviour {
     }    
 
     void Move(Vector3 Velocity)
-    {
-        if (TheCameraPanner == null)
-        TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("FUCK");
-        else
-            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("GOOD");
-
+    {                
         if (TheCameraPanner != null && IsRealPlayer)
         {
             //Replace with level min and max Y!!

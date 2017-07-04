@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
-    {
-        Debug.Log("THIS IS NUTS");
+    {     
         Humans = GetComponentsInChildren<PlayerInput>();
         DoTitleScreen();
 	}
@@ -28,9 +27,7 @@ public class GameManager : MonoBehaviour {
             {
                 AttemptJoin(Human);
             }
-        }
-
-        
+        }        
     }
 
     static public PlayerInput GetPlayerInput(int Index)
