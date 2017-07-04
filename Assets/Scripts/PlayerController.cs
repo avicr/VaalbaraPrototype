@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        // Call set player!!!!!!!!
+        if (IsRealPlayer)
+        {
+            GameManager.GetPlayerInput(PlayerNumber).Player = this;
+        }
+
         AnimController = GetComponent<Animator>();
         MainCollider = GetComponent<BoxCollider>();
 
@@ -120,13 +126,14 @@ public class PlayerController : MonoBehaviour {
     {
         if (IsRealPlayer && Health <= 0 && inputContainer.AttackPressed)
         {
-            foreach (GameObject Object in SceneManager.GetSceneByName("TopLevelShit").GetRootGameObjects())
-            {
-                if (Object.GetComponent<GameManager>() != null)
-                {
-                    Object.GetComponent<GameManager>().Restart();
-                }
-            }
+            GameManager.Restart();
+            //foreach (GameObject Object in SceneManager.GetSceneByName("TopLevelShit").GetRootGameObjects())
+            //{
+            //    if (Object.GetComponent<GameManager>() != null)
+            //    {
+            //        Object.GetComponent<GameManager>().Restart();
+            //    }
+            //}
         }
         //if (!TheCameraPanner.IsOnScreen(gameObject))
         //{
@@ -194,6 +201,11 @@ public class PlayerController : MonoBehaviour {
 
     void Move(Vector3 Velocity)
     {
+        if (TheCameraPanner == null)
+        TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("FUCK");
+        else
+            TheCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText("GOOD");
+
         if (TheCameraPanner != null && IsRealPlayer)
         {
             //Replace with level min and max Y!!

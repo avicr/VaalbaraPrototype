@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine.Events;
 using System.Collections;
+using System;
 
 public struct InputContainer
 {
@@ -50,8 +51,31 @@ public struct TouchContainer
     public bool TouchAttack2;
 }
 
+public enum eCharacter
+{
+    NotSelected,
+    Crispin,
+    Eddie,
+    Josh,
+    Scott,
+    Trent
+};
+
+[Serializable]
+public struct PlayerInfo 
+{
+
+    public int Score;
+    public int PlayerNumber;
+    public bool HasJoined;
+    public eCharacter SelectedCharacter;
+
+}
+
 public class PlayerInput : MonoBehaviour
 {
+    [SerializeField]
+    public PlayerInfo Info;
     protected int PlayerNumber;
     public KeyCode JumpingKey;
     public KeyCode AttackingKey;
@@ -343,11 +367,11 @@ public class PlayerInput : MonoBehaviour
 
             if (Input.GetTouch(0).position.x >= Screen.width / 2)
             {
-                Player.ChangeDirection(0);
+                //Player.ChangeDirection(0);
             }
             else
             {
-                Player.ChangeDirection(1);
+                //Player.ChangeDirection(1);
 
             }
         }

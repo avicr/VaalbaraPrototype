@@ -9,6 +9,7 @@ public class CameraPanner : MonoBehaviour {
     protected WaveManager ActiveWaveManager;
     public float MaxX;
     public float MinX;
+    public Camera TheCamera;
 
 	// Use this for initialization
 	void Start ()
@@ -18,19 +19,17 @@ public class CameraPanner : MonoBehaviour {
         //Camera.main.orthographic = false;
         //MaxX = BG.transform.position.x + BG.GetComponent<SpriteRenderer>().bounds.size.x; 
         List<PlayerController> PlayersToAdd = new List<PlayerController>();
-        
-        foreach (PlayerInput HumanPlayerInput in FindObjectsOfType<PlayerInput>())
+    
+        //TheCamera = GetComponent from manager    
+        foreach (PlayerInput HumanPlayerInput in GameManager.GetPlayerInputs())
         {
-            if (HumanPlayerInput.GetComponent<PlayerController>().IsRealPlayer)
-            {
-                ThePlayers.Add(HumanPlayerInput.GetComponent<PlayerController>());
-            }
-            
+            ThePlayers.Add(HumanPlayerInput.Player);
         }                
     }    
 
     public void UpdateScroll(PlayerController HumanPlayer, Vector3 Velocity)
     {
+        Debug.Log("Update Scroll " + ThePlayers.Count);
         ThePlayers = ThePlayers.OrderByDescending(Player => Player.transform.position.x).ToList<PlayerController>();
         bool IsLeadPlayer = HumanPlayer == ThePlayers.First();
 

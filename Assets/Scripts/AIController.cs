@@ -54,8 +54,8 @@ public class AIController : MonoBehaviour {
 
     void AcquireTarget()
     {
-        PlayerInput[] Players = FindObjectsOfType<PlayerInput>();
-        Target = Players[Random.Range(0, Players.Length)].GetComponent<PlayerController>();
+        PlayerInput[] Players = GameManager.GetPlayerInputs();
+        Target = Players[Random.Range(0, Players.Length)].Player;
     }
 
     void DoAttack()

@@ -9,16 +9,13 @@ public class TitleScreenManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-
-        TheInput = GetComponent<PlayerInput>();
+   
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        InputContainer FrameInput = TheInput.GetInput();
-
-        if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Winners") && FrameInput.AttackPressed)
+        if (GameManager.GetNumJoinedPlayers() > 0)
         {
             GetComponent<Animator>().SetTrigger("MenuCleared");
         }
