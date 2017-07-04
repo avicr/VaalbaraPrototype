@@ -39,7 +39,6 @@ public class CameraPanner : MonoBehaviour {
 
     public void UpdateScroll(PlayerController HumanPlayer, Vector3 Velocity)
     {
-        Debug.Log("Update Scroll " + ThePlayers.Count);
         ThePlayers = ThePlayers.OrderByDescending(Player => Player.transform.position.x).ToList<PlayerController>();
         bool IsLeadPlayer = HumanPlayer == ThePlayers.First();
 

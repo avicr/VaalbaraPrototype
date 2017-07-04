@@ -1,0 +1,2240 @@
+fileFormatVersion: 2
+guid: b3a9d23bb2107f5439c3acb81579b82d
+timeCreated: 1499146056
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BillyandJimmy_0
+    21300002: BillyandJimmy_1
+    21300004: BillyandJimmy_2
+    21300006: BillyandJimmy_3
+    21300008: BillyandJimmy_4
+    21300010: BillyandJimmy_5
+    21300012: BillyandJimmy_6
+    21300014: BillyandJimmy_7
+    21300016: BillyandJimmy_8
+    21300018: BillyandJimmy_9
+    21300020: BillyandJimmy_10
+    21300022: BillyandJimmy_11
+    21300024: BillyandJimmy_12
+    21300026: BillyandJimmy_13
+    21300028: BillyandJimmy_14
+    21300030: BillyandJimmy_15
+    21300032: BillyandJimmy_16
+    21300034: BillyandJimmy_17
+    21300036: BillyandJimmy_18
+    21300038: BillyandJimmy_19
+    21300040: BillyandJimmy_20
+    21300042: BillyandJimmy_21
+    21300044: BillyandJimmy_22
+    21300046: BillyandJimmy_23
+    21300048: BillyandJimmy_24
+    21300050: BillyandJimmy_25
+    21300052: BillyandJimmy_26
+    21300054: BillyandJimmy_27
+    21300056: BillyandJimmy_28
+    21300058: BillyandJimmy_29
+    21300060: BillyandJimmy_30
+    21300062: BillyandJimmy_31
+    21300064: BillyandJimmy_32
+    21300066: BillyandJimmy_33
+    21300068: BillyandJimmy_34
+    21300070: BillyandJimmy_35
+    21300072: BillyandJimmy_36
+    21300074: BillyandJimmy_37
+    21300076: BillyandJimmy_38
+    21300078: BillyandJimmy_39
+    21300080: BillyandJimmy_40
+    21300082: BillyandJimmy_41
+    21300084: BillyandJimmy_42
+    21300086: BillyandJimmy_43
+    21300088: BillyandJimmy_44
+    21300090: BillyandJimmy_45
+    21300092: BillyandJimmy_46
+    21300094: BillyandJimmy_47
+    21300096: BillyandJimmy_48
+    21300098: BillyandJimmy_49
+    21300100: BillyandJimmy_50
+    21300102: BillyandJimmy_51
+    21300104: BillyandJimmy_52
+    21300106: BillyandJimmy_53
+    21300108: BillyandJimmy_54
+    21300110: BillyandJimmy_55
+    21300112: BillyandJimmy_56
+    21300114: BillyandJimmy_57
+    21300116: BillyandJimmy_58
+    21300118: BillyandJimmy_59
+    21300120: BillyandJimmy_60
+    21300122: BillyandJimmy_61
+    21300124: BillyandJimmy_62
+    21300126: BillyandJimmy_63
+    21300128: BillyandJimmy_64
+    21300130: BillyandJimmy_65
+    21300132: BillyandJimmy_66
+    21300134: BillyandJimmy_67
+    21300136: BillyandJimmy_68
+    21300138: BillyandJimmy_69
+    21300140: BillyandJimmy_70
+    21300142: BillyandJimmy_71
+    21300144: BillyandJimmy_72
+    21300146: BillyandJimmy_73
+    21300148: BillyandJimmy_74
+    21300150: BillyandJimmy_75
+    21300152: BillyandJimmy_76
+    21300154: BillyandJimmy_77
+    21300156: BillyandJimmy_78
+    21300158: BillyandJimmy_79
+    21300160: BillyandJimmy_80
+    21300162: BillyandJimmy_81
+    21300164: BillyandJimmy_82
+    21300166: BillyandJimmy_83
+    21300168: BillyandJimmy_84
+    21300170: BillyandJimmy_85
+    21300172: BillyandJimmy_86
+    21300174: BillyandJimmy_87
+    21300176: BillyandJimmy_88
+    21300178: BillyandJimmy_89
+    21300180: BillyandJimmy_90
+    21300182: BillyandJimmy_91
+    21300184: BillyandJimmy_92
+    21300186: BillyandJimmy_93
+    21300188: BillyandJimmy_94
+    21300190: BillyandJimmy_95
+    21300192: BillyandJimmy_96
+    21300194: BillyandJimmy_97
+    21300196: BillyandJimmy_98
+    21300198: BillyandJimmy_99
+    21300200: BillyandJimmy_100
+    21300202: BillyandJimmy_101
+    21300204: BillyandJimmy_102
+    21300206: BillyandJimmy_103
+    21300208: BillyandJimmy_104
+    21300210: BillyandJimmy_105
+    21300212: BillyandJimmy_106
+    21300214: BillyandJimmy_107
+    21300216: BillyandJimmy_108
+    21300218: BillyandJimmy_109
+    21300220: BillyandJimmy_110
+    21300222: BillyandJimmy_111
+    21300224: BillyandJimmy_112
+    21300226: BillyandJimmy_113
+    21300228: BillyandJimmy_114
+    21300230: BillyandJimmy_115
+    21300232: BillyandJimmy_116
+    21300234: BillyandJimmy_117
+    21300236: BillyandJimmy_118
+    21300238: BillyandJimmy_119
+    21300240: BillyandJimmy_120
+    21300242: BillyandJimmy_121
+    21300244: BillyandJimmy_122
+    21300246: BillyandJimmy_123
+    21300248: BillyandJimmy_124
+    21300250: BillyandJimmy_125
+    21300252: BillyandJimmy_126
+    21300254: BillyandJimmy_127
+    21300256: BillyandJimmy_128
+    21300258: BillyandJimmy_129
+    21300260: BillyandJimmy_130
+    21300262: BillyandJimmy_131
+    21300264: BillyandJimmy_132
+    21300266: BillyandJimmy_133
+    21300268: BillyandJimmy_134
+    21300270: BillyandJimmy_135
+    21300272: BillyandJimmy_136
+    21300274: BillyandJimmy_137
+    21300276: BillyandJimmy_138
+    21300278: BillyandJimmy_139
+    21300280: BillyandJimmy_140
+    21300282: BillyandJimmy_141
+    21300284: BillyandJimmy_142
+    21300286: BillyandJimmy_143
+    21300288: BillyandJimmy_144
+    21300290: BillyandJimmy_145
+    21300292: BillyandJimmy_146
+    21300294: BillyandJimmy_147
+    21300296: BillyandJimmy_148
+    21300298: BillyandJimmy_149
+    21300300: BillyandJimmy_150
+    21300302: BillyandJimmy_151
+    21300304: BillyandJimmy_152
+    21300306: BillyandJimmy_153
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BillyandJimmy_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 573
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 573
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 574
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 573
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 574
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 573
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 573
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 574
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 575
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_9
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 575
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_10
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 576
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_11
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 575
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_12
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 575
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_13
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 575
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_14
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 574
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_15
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 573
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_16
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 574
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_17
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 574
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 527
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 527
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 533
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_21
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 533
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 527
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_23
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 511
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_24
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 510
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_25
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 514
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_26
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 514
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_27
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 515
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_28
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 514
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_29
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 534
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_30
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 520
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_31
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 513
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_32
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 516
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_33
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 516
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_34
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 517
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_35
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 521
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_36
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 454
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_37
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 454
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_38
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 456
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_39
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 454
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_40
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 454
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_41
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 461
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_42
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 453
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_43
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 458
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_44
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 478
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_45
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 455
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_46
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 456
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_47
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 456
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_48
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 455
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_49
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 455
+        width: 25
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_50
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 455
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_51
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 455
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_52
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 457
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_53
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 383
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_54
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 383
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_55
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 382
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_56
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 382
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_57
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 387
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_58
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 387
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_59
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 387
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_60
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 385
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_61
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 387
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_62
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 387
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_63
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 387
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_64
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 388
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_65
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 386
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_66
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 385
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_67
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 384
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 328
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_69
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 327
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 328
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_71
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 358
+        width: 43
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_72
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 331
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_73
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 330
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_74
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 329
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_75
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 280
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_76
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 277
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_77
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 276
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_78
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 275
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_79
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 276
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_80
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 275
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_81
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 276
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_82
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 277
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_83
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 275
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_84
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 275
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_85
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 275
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_86
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 275
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_87
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 274
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_88
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 278
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_89
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 279
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_90
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 274
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_91
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 273
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_92
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 231
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_93
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 228
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_94
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 223
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_95
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 224
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_96
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 221
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_97
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 217
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_98
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 217
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_99
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 221
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_100
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 224
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_101
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 223
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_102
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 223
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_103
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 169
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_104
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 169
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_105
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 168
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_106
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 169
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_107
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 168
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_108
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 166
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_109
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 167
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_110
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 167
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_111
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 168
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_112
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 169
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_113
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 172
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_114
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 172
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_115
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 168
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_116
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 168
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_117
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 169
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_118
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 171
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_119
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 116
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_120
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 113
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_121
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 110
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_122
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 110
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_123
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 107
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_124
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 104
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_125
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 104
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_126
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 109
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_127
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 109
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_128
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 84
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_129
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 54
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_130
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 54
+        width: 4
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_131
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 54
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_132
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 54
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_133
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 54
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_134
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 47
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_135
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 45
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_136
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 38
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_137
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 54
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_138
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 54
+        width: 4
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_139
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 54
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_140
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 54
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_141
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 54
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_142
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 36
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_143
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 25
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_144
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 23
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_145
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 23
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_146
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_147
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 23
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_148
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 12
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_149
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 14
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_150
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 14
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_151
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 14
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_152
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 14
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BillyandJimmy_153
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 84
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
