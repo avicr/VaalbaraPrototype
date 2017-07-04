@@ -54,7 +54,7 @@ public class AIController : MonoBehaviour {
 
     void AcquireTarget()
     {
-        PlayerInput[] Players = GameManager.GetPlayerInputs();
+        PlayerInput[] Players = GameManager.GetJoinedPlayers().ToArray();
         Target = Players[Random.Range(0, Players.Length)].Player;
     }
 

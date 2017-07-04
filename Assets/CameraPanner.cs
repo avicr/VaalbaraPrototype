@@ -29,16 +29,16 @@ public class CameraPanner : MonoBehaviour {
             }
         }
 
-        foreach (PlayerInput HumanPlayerInput in GameManager.GetPlayerInputs())
-        {
-            ThePlayers.Add(HumanPlayerInput.Player);
-        }
-
         TheCamera.transform.position = transform.position;
     }    
 
     public void UpdateScroll(PlayerController HumanPlayer, Vector3 Velocity)
     {
+        foreach (PlayerInput HumanPlayerInput in GameManager.GetJoinedPlayers())
+        {
+            ThePlayers.Add(HumanPlayerInput.Player);
+        }
+
         ThePlayers = ThePlayers.OrderByDescending(Player => Player.transform.position.x).ToList<PlayerController>();
         bool IsLeadPlayer = HumanPlayer == ThePlayers.First();
 

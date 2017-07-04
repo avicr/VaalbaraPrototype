@@ -19,8 +19,13 @@ public class PlayerSelectController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (!MyPlayer.Info.HasJoined)
+        {
+            return;
+        }
+        Debug.Log("Player " + PlayerNumber);
         InputContainer FrameInput = MyPlayer.GetCachedInput();
-        if (FrameInput.AttackPressed)
+        if (FrameInput.AttackPressed || FrameInput.Attack2Pressed)
         {
             Debug.Log("YOU CHOSE");
             MyPlayer.Info.SelectedCharacter = (eCharacter)CurrentPlayer + 1;

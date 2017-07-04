@@ -6,6 +6,8 @@ using System;
 
 public struct InputContainer
 {
+    public bool StartPressed;
+    
     public bool Attack2Pressed;
     public bool Attack2Released;
 
@@ -16,7 +18,6 @@ public struct InputContainer
     public bool NextWeaponPressed;
 
     public Vector2 MovementAxis;
-
     
     public bool DownHeld;
 
@@ -26,7 +27,8 @@ public struct InputContainer
     {
         this.Attack2Pressed = false;
         this.Attack2Released = false;
-        this.AttackPressed = false;        
+        this.AttackPressed = false;
+        this.StartPressed = false;      
         this.AttackReleased = false;
         this.PreviousWeaponPressed = false;
         this.NextWeaponPressed = false;
@@ -37,7 +39,7 @@ public struct InputContainer
     public bool WasSomethingPressed()
     {
         bool pressed = Attack2Pressed || Attack2Released
-            || AttackPressed || PreviousWeaponPressed || NextWeaponPressed;
+            || AttackPressed || PreviousWeaponPressed || NextWeaponPressed || StartPressed;
         pressed = pressed || MovementAxis.x != 0f || MovementAxis.y != 0f || DownHeld;
         return pressed;
     }
@@ -88,6 +90,7 @@ public class PlayerInput : MonoBehaviour
     protected int PlayerNumber;
     public KeyCode JumpingKey;
     public KeyCode AttackingKey;
+    public KeyCode StartKey;
     public KeyCode MoveLeftKey;
     public KeyCode MoveRightKey;
     public KeyCode DownKey;
@@ -169,16 +172,8 @@ public class PlayerInput : MonoBehaviour
 
         // Check Movement
 
-        float movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(0));
-        float movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(0));
-
-        if (Player != null)
-        {
-            movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(Player.PlayerNumber));
-            movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(Player.PlayerNumber));
-        }
-
-
+        float movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(PlayerNumber));
+        float movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(PlayerNumber));
 
         TouchContainer Touch = GetTouchInput();
 
@@ -243,6 +238,9 @@ public class PlayerInput : MonoBehaviour
         
         inputContainer.AttackReleased = Input.GetButtonUp(shootString)
             || Input.GetKeyUp(AttackingKey);
+
+        // TODO: Input util
+        inputContainer.StartPressed = Input.GetKeyDown(StartKey) || Touch.TouchAttack || Touch.TouchAttack2;
 
         // Check weapon switching
         inputContainer.PreviousWeaponPressed = /*Input.GetButtonDown(InputUtility.GetPreviousWeaponButtonName(Player.PlayerNumber))

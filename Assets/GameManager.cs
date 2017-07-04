@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     static protected int PendingSceneDeletes;
     static protected bool PlayersCanJoin;
     static protected PlayerInput[] Humans;
-    static protected int NumJoinedPlayers;
+    static protected List<PlayerInput>JoinedPlayers = new List<PlayerInput>();
 
 	// Use this for initialization
 	void Start ()
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
             InputContainer FrameInput = Human.GetCachedInput();
             
             // TODO: Change to start button!
-            if (FrameInput.AttackPressed || FrameInput.Attack2Pressed)
+            if (FrameInput.StartPressed)
             {
                 AttemptJoin(Human);
             }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
         if(PlayersCanJoin && !JoiningPlayer.Info.HasJoined)
         {
             JoiningPlayer.Info.HasJoined = true;
-            NumJoinedPlayers++;
+            JoinedPlayers.Add(JoiningPlayer);
         }
 
         return JoiningPlayer.Info.HasJoined;
@@ -57,13 +57,13 @@ public class GameManager : MonoBehaviour {
         if (LeavingPlayer.Info.HasJoined)
         {
             LeavingPlayer.Info.HasJoined = false;
-            NumJoinedPlayers--;
+            JoinedPlayers.Remove(LeavingPlayer);
         }
     }
 
     static public void Restart()
     {
-        NumJoinedPlayers = 0;
+        JoinedPlayers = new List<PlayerInput>();
         PendingSceneDeletes = SceneManager.sceneCount - 1;
 
         for (int i = 0; i < SceneManager.sceneCount; i++)
@@ -116,7 +116,13 @@ public class GameManager : MonoBehaviour {
     }
     static public int GetNumJoinedPlayers()
     {
-        return NumJoinedPlayers;
+        return JoinedPlayers.Count;
+    }
+
+    static public List<PlayerInput> GetJoinedPlayers()
+    {
+
+        return new List<PlayerInput>(JoinedPlayers);
     }
 
     static public bool GetPlayersReady()

@@ -32,15 +32,29 @@ public class PlayerController : MonoBehaviour {
     protected WaveManager MyWaveManager;
 
     // Use this for initialization
-    void Start ()
+    public void Start ()
     {
+        AnimController = GetComponent<Animator>();
+
         // Call set player!!!!!!!!
         if (IsRealPlayer)
         {
-            GameManager.GetPlayerInput(PlayerNumber).Player = this;
+            PlayerInput MyInput = GameManager.GetPlayerInput(PlayerNumber);
+            
+            MyInput.Player = this;
+
+            if (!MyInput.Info.HasJoined)
+            {
+                GameObjectParent.SetActive (false);
+                return;
+            }
+
+            if (MyInput.Info.SelectedCharacter == eCharacter.Scott)
+            {
+                AnimController.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animations/Chin/ChinAnimationController");
+            }
         }
 
-        AnimController = GetComponent<Animator>();
         MainCollider = GetComponent<BoxCollider>();
 
         GameObjectParent.transform.position = new Vector3(GameObjectParent.transform.position.x, GameObjectParent.transform.position.y, GameObjectParent.transform.position.y);
