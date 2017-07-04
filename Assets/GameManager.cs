@@ -21,8 +21,9 @@ public class GameManager : MonoBehaviour {
     {
         foreach (PlayerInput Human in Humans)
         {
-            InputContainer FrameInput = Human.GetInput();
+            InputContainer FrameInput = Human.GetCachedInput();
             
+            // TODO: Change to start button!
             if (FrameInput.AttackPressed || FrameInput.Attack2Pressed)
             {
                 AttemptJoin(Human);
@@ -72,6 +73,11 @@ public class GameManager : MonoBehaviour {
                 SceneManager.UnloadSceneAsync(i);
             }
         }
+
+        foreach (PlayerInput Human in Humans)
+        {
+            Human.Info = new PlayerInfo();
+        }
         SceneManager.sceneUnloaded += OnSceneUnloadedForRestart;
     }
 
@@ -111,5 +117,19 @@ public class GameManager : MonoBehaviour {
     static public int GetNumJoinedPlayers()
     {
         return NumJoinedPlayers;
+    }
+
+    static public bool GetPlayersReady()
+    {
+        // Assumes at least one player has joined
+        foreach (PlayerInput Human in Humans)
+        {
+            if (Human.Info.HasJoined && Human.Info.SelectedCharacter == eCharacter.NotSelected)
+            {
+                return false;
+            }
+        }
+
+        return GetNumJoinedPlayers() > 0;
     }
 }

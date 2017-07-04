@@ -14,18 +14,47 @@ public class TitleScreenManager : MonoBehaviour {
    
 	}
 
-    public void OnCrispinSelected(string Param)
+    public void OnCrispinSelected()
     {
-        Debug.Log("I am here" + Param);
-        GetComponent<Animator>().SetTrigger("PlayersReady");
+        //GetComponent<Animator>().SetTrigger("PlayersReady");
+        GameManager.GetPlayerInputs()[0].Info.SelectedCharacter = eCharacter.Crispin;
     }
 
-	// Update is called once per frame
-	void Update ()
+    public void OnJoshSelected()
+    {
+        //GetComponent<Animator>().SetTrigger("PlayersReady");
+        GameManager.GetPlayerInputs()[0].Info.SelectedCharacter = eCharacter.Josh;
+    }
+
+    public void OnEddieSelected()
+    {
+        //GetComponent<Animator>().SetTrigger("PlayersReady");
+        GameManager.GetPlayerInputs()[0].Info.SelectedCharacter = eCharacter.Eddie;
+    }
+
+    public void OnScottySelected()
+    {
+        //GetComponent<Animator>().SetTrigger("PlayersReady");
+        GameManager.GetPlayerInputs()[0].Info.SelectedCharacter = eCharacter.Scott;
+    }
+
+    public void OnTrentSelected()
+    {
+        //GetComponent<Animator>().SetTrigger("PlayersReady");
+        GameManager.GetPlayerInputs()[0].Info.SelectedCharacter = eCharacter.Trent;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if (GameManager.GetNumJoinedPlayers() > 0)
         {
             GetComponent<Animator>().SetBool("PlayerJoined", true);
+        }
+
+        if (GameManager.GetPlayersReady())
+        {
+            GetComponent<Animator>().SetBool("PlayersReady", true);
         }
 	}
 }

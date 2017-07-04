@@ -18,7 +18,9 @@ public struct InputContainer
     public Vector2 MovementAxis;
 
     
-    public bool DownHeld;    
+    public bool DownHeld;
+
+    public AxisState AxisStateX;
 
     public void Reset()
     {
@@ -54,17 +56,24 @@ public struct TouchContainer
 public enum eCharacter
 {
     NotSelected,
-    Crispin,
-    Eddie,
     Josh,
+    Crispin,
     Scott,
-    Trent
+    Trent,
+    Eddie
 };
+
+public enum AxisState
+{
+    NoChange,
+    Zero,
+    Negative,
+    Positive
+}
 
 [Serializable]
 public struct PlayerInfo 
 {
-
     public int Score;
     public int PlayerNumber;
     public bool HasJoined;
@@ -98,6 +107,10 @@ public class PlayerInput : MonoBehaviour
 
     public TMP_InputField DeadZoneTextField;
 
+    protected AxisState LastAxisXState;
+
+    InputContainer inputContainer;
+
     void Start()
     {
         if (Player != null)
@@ -109,6 +122,11 @@ public class PlayerInput : MonoBehaviour
             PlayerNumber = 0;
         }
         //DeadZoneTextField.text = DeadZone.ToString();
+    }
+
+    public InputContainer GetCachedInput()
+    {
+        return inputContainer;
     }
 
     public void OnFixedJoystickChanged(bool Value)
@@ -129,9 +147,10 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        GetInput();
         if (!IsAIControlled && Player != null)
         {
-            Player.inputContainer = GetInput();
+            Player.inputContainer = GetCachedInput();
         }
     }
 
@@ -143,9 +162,9 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    public InputContainer GetInput()
+    private InputContainer GetInput()
     {
-        InputContainer inputContainer = new InputContainer();
+        inputContainer = new InputContainer();
         inputContainer.Reset();
 
         // Check Movement
@@ -158,6 +177,8 @@ public class PlayerInput : MonoBehaviour
             movementX = Input.GetAxisRaw(InputUtility.GetXAxisName(Player.PlayerNumber));
             movementY = Input.GetAxisRaw(InputUtility.GetYAxisName(Player.PlayerNumber));
         }
+
+
 
         TouchContainer Touch = GetTouchInput();
 
@@ -181,7 +202,33 @@ public class PlayerInput : MonoBehaviour
 
         inputContainer.MovementAxis = new Vector2(movementX, movementY); // TODO - handle Y axis for shooting special weapons        
 
-       
+        // Change to deadzone
+        if (movementX == 0)
+        {
+            inputContainer.AxisStateX = AxisState.Zero;
+        }
+        else
+        {
+            if (Mathf.Sign(movementX) == 1)
+            {
+                inputContainer.AxisStateX = AxisState.Positive;
+            }
+            else
+            {
+                inputContainer.AxisStateX = AxisState.Negative;
+            }
+        }
+
+        AxisState TempAxisXState = inputContainer.AxisStateX;
+
+        if (inputContainer.AxisStateX == LastAxisXState)
+        {
+            inputContainer.AxisStateX = AxisState.NoChange;
+        }
+
+        LastAxisXState = TempAxisXState;
+
+
         // Check Attack2ing
         inputContainer.Attack2Pressed = Input.GetButtonDown(InputUtility.GetJumpButtonName(PlayerNumber))
             || Input.GetKeyDown(JumpingKey) || Touch.TouchAttack2;
