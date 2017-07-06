@@ -334,7 +334,7 @@ public class PlayerController : MonoBehaviour {
     public void OnFlyEnd()
     {
         Debug.Log("fly end");
-        Vector3 What = transform.TransformPoint(Vector3.zero) - GameObjectParent.transform.position;
+        //Vector3 What = transform.TransformPoint(Vector3.zero) - GameObjectParent.transform.position;
         //What.y = -What.y;
         GameObjectParent.transform.position = transform.TransformPoint(Vector3.zero);// - spriteRenderer.bounds;// / 2;
         transform.position = Vector3.zero;

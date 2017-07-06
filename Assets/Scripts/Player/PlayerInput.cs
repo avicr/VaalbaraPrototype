@@ -87,7 +87,7 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
     public PlayerInfo Info;
-    protected int PlayerNumber;
+    public int PlayerNumber;
     public KeyCode JumpingKey;
     public KeyCode AttackingKey;
     public KeyCode StartKey;
@@ -119,11 +119,7 @@ public class PlayerInput : MonoBehaviour
         if (Player != null)
         {
             Player.inputContainer.Reset();
-        }
-        else
-        {
-            PlayerNumber = 0;
-        }
+        }       
         //DeadZoneTextField.text = DeadZone.ToString();
     }
 
@@ -240,7 +236,7 @@ public class PlayerInput : MonoBehaviour
             || Input.GetKeyUp(AttackingKey);
 
         // TODO: Input util
-        inputContainer.StartPressed = Input.GetKeyDown(StartKey) || Touch.TouchAttack || Touch.TouchAttack2;
+        inputContainer.StartPressed = Input.GetKeyDown(StartKey) || (PlayerNumber == 0 && (Touch.TouchAttack || Touch.TouchAttack2));
 
         // Check weapon switching
         inputContainer.PreviousWeaponPressed = /*Input.GetButtonDown(InputUtility.GetPreviousWeaponButtonName(Player.PlayerNumber))

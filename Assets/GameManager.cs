@@ -2,23 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 
+    static protected int Credits;
     static protected int PendingSceneDeletes;
     static protected bool PlayersCanJoin;
     static protected PlayerInput[] Humans;
     static protected List<PlayerInput>JoinedPlayers = new List<PlayerInput>();
+    
+    static public bool ArcadeMode = true;
 
 	// Use this for initialization
 	void Start ()
     {     
         Humans = GetComponentsInChildren<PlayerInput>();
+        Humans = Humans.OrderBy(Player => Player.PlayerNumber).ToArray();
         DoTitleScreen();
 	}
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            Credits++;
+        }
+
         foreach (PlayerInput Human in Humans)
         {
             InputContainer FrameInput = Human.GetCachedInput();
@@ -29,6 +39,11 @@ public class GameManager : MonoBehaviour {
                 AttemptJoin(Human);
             }
         }        
+    }
+
+    static public void AddCredit()
+    {
+        Credits++;
     }
 
     static public PlayerInput GetPlayerInput(int Index)
@@ -43,10 +58,11 @@ public class GameManager : MonoBehaviour {
 
     static public bool AttemptJoin(PlayerInput JoiningPlayer)
     {
-        if(PlayersCanJoin && !JoiningPlayer.Info.HasJoined)
+        if((!ArcadeMode || Credits > 0) && PlayersCanJoin && !JoiningPlayer.Info.HasJoined)
         {
             JoiningPlayer.Info.HasJoined = true;
             JoinedPlayers.Add(JoiningPlayer);
+            Credits--;
         }
 
         return JoiningPlayer.Info.HasJoined;
